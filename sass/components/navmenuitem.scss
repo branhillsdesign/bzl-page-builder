@@ -1,0 +1,66 @@
+@import 'sass/base/theme.scss';
+
+.anim-arrow {
+  opacity: 0;
+  transform: translateX(-16px);
+}
+
+.menuitem-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.menuitem-wrapper img {
+  width: 24px;
+}
+.component-body { color: $grey-70;
+  @include component-body;
+}
+
+.navmenulist {
+  @include flex-center;
+  background-color: $white;
+  border-radius: 8px;
+  gap: 2px;
+}
+
+.navmenulist form {
+  width: 100%/3;
+  height: 10rem;
+}
+
+.navmenuitem {
+  height: 100%;
+  @include component-body;
+  color: $grey-70;
+  text-align: left;
+  cursor: pointer;
+  width: 16rem;
+  border: none;
+  padding: 1.5rem;
+  background-color: $white;
+  border-radius: 6px;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: $grey-10;
+  }
+  &:focus {
+    outline: 2px solid $primary-green;
+  }
+  &:hover .anim-arrow{
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 0.3s ease;
+  }
+}
+
+.grandchild-menu-list > a:focus {
+  outline: 2px solid $primary-green;
+}
+
+.navmenuitem div {
+  @include ubuntu-16px-medium;
+  color: $primary-green;
+  margin-bottom: 4px;
+}

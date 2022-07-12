@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  },
+  "name": "bzl-page-builder",
+  "version": "1.0.0",
+  "description": "page builder for bizlibrary marketing team",
+  "main": "index.html",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch sass -o css"
+  },
+  "author": "bran hills",
+  "license": "ISC"
+}

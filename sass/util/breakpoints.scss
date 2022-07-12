@@ -1,0 +1,35 @@
+$mobile: 576;
+$tablet: 768;
+$laptop: 992;
+$desktop: 1200;
+$ultrawide: 2000;
+
+@mixin mobile {
+  @media only screen and (min-width:( $mobile * 1px)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width:( $tablet * 1px)) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: ($large * 1px) ) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: ($desktop * 1px) ) {
+    @content;
+  }
+}
+
+@mixin ultrawide {
+  @media only screen and (min-width: ($ultrawide * 1px) ) {
+    @content;
+  }
+}

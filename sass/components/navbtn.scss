@@ -1,0 +1,57 @@
+@import 'sass/base/theme.scss';
+@import 'sass/util/animations.scss';
+
+.nav-btn {          
+  position: relative;
+  @include component-body;
+  background: none;
+  border: none;
+  color: $primary-text-grey;
+  padding: 8px 24px;
+  border-radius: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 4px;
+  &:hover, &:focus {
+    background-color: $grey-10;
+    transition: all 0.2s ease-in;
+  }
+  &:hover .logomark {
+    @include rotate90;
+    transition: all 0.2s ease-out;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 32px);
+    transform: scaleX(0);
+    left: 0;
+    bottom: -8px;
+    transform-origin: bottom center;
+    height: 8px;
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+    background-color: $primary-green;
+    transition: transform 0.3s ease;
+  }
+  &:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+  }
+  &:focus {
+    outline: 2px solid $primary-green;
+  }
+  &:focus .logomark {
+    @include rotate90;
+    transition: all 0.2s ease;
+  }
+  &:focus::after {
+    transform:scaleX(1);
+    transform-origin: bottom center;
+  }
+}
+
+.logomark {
+  width: 16px;
+}

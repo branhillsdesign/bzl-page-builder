@@ -1,0 +1,25 @@
+@import 'sass/util/flexbox.scss';
+@import 'sass/components/navbtn.scss';
+@import 'sass/components/navctabtn.scss';
+@import 'sass/components/navdropdown.scss';
+@import 'sass/components/navmenuitem.scss';
+
+.nav-wrapper {
+  max-width: 1188px + 104px;
+  @include flex-center;
+  background-color: #fff;
+  border-radius: 999px;
+  padding: 32px 52px;
+  justify-content: space-between;
+  margin: 60px auto 0px auto;
+  @include box-shadow-prime;
+}
+
+.logo {
+  height: 30px;
+}
+
+.nav-btn-wrapper {
+  display: flex;
+  gap: 2px;
+}

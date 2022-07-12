@@ -1,0 +1,22 @@
+@import 'sass/base/theme.scss';
+
+.nav-cta-btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 32px;
+  padding: 8px 24px;
+  color: $white;
+  @include ubuntu-16px-medium;
+  background: linear-gradient(180deg, #09983D 0%, #00C12D 100%);
+  &:hover, &:focus {
+    background: linear-gradient(0deg, #09983D 0%, #00C12D 100%);
+    box-shadow: var(--shadow-elevation-low);
+  }
+  &:focus {
+    outline: 2px solid $primary-navy;
+  }
+  &:active {
+    background: $green-60;
+    outline: none;
+  }
+}
