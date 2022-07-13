@@ -26,7 +26,7 @@
 
 .navmenulist form {
   width: 100%/3;
-  height: 10rem;
+  height: 100%;
 }
 
 .navmenuitem {
@@ -41,7 +41,6 @@
   background-color: $white;
   border-radius: 6px;
   flex-direction: column;
-  transition: all 0.3s ease;
   &:hover {
     background-color: $grey-10;
   }

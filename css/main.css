@@ -148,41 +148,34 @@
     0.6px 65px 97.5px hsl(var(--shadow-color) / 0.31); }
 
 #products-nav-btn:hover ~ .navdropdown {
-  opacity: 1;
-  scale: 1; }
+  visibility: visible; }
   #products-nav-btn:hover ~ .navdropdown:focus {
-    opacity: 1;
-    scale: 1; }
+    visibility: visible; }
   #products-nav-btn:hover ~ .navdropdown:focus-within {
-    opacity: 1;
-    scale: 1; }
+    visibility: visible; }
 
 #content-gc-menu {
-  opacity: 0;
   background-color: whitesmoke;
   border-radius: 0 6px 6px 0;
   padding: 1rem;
   position: absolute;
   left: calc(50% - 1rem);
   top: -.5rem;
-  scale: 0;
+  visibility: hidden;
   height: calc(100% + 8px);
   border-top: 0.5rem solid #00ab3f; }
   #content-gc-menu:hover {
     left: calc(100% - 1.375rem);
     z-index: 1;
-    opacity: 1;
-    scale: 1; }
+    visibility: visible; }
   #content-gc-menu:focus {
     left: calc(100% - 1.375rem);
     z-index: 1;
-    opacity: 1;
-    scale: 1; }
+    visibility: visible; }
   #content-gc-menu:focus-within {
     left: calc(100% - 1.375rem);
     z-index: 1;
-    opacity: 1;
-    scale: 1; }
+    visibility: visible; }
 
 #content-menu {
   cursor: default;
@@ -190,40 +183,35 @@
   #content-menu:hover ~ #content-gc-menu {
     left: calc(100% - 1.375rem);
     z-index: 1;
-    opacity: 1;
-    scale: 1; }
+    visibility: visible; }
   #content-menu:focus ~ #content-gc-menu {
     left: calc(100% - 1.375rem);
     z-index: 1;
-    opacity: 1;
-    scale: 1; }
+    visibility: visible; }
 
 #browse-gc-menu {
-  opacity: 0;
+  visibility: visible;
   background-color: whitesmoke;
   border-radius: 0 6px 6px 0;
   padding: 1rem;
   position: absolute;
   left: calc(50% - 1rem);
   top: -.5rem;
-  scale: 0;
+  visibility: hidden;
   height: calc(100% + 8px);
   border-top: 0.5rem solid #00ab3f; }
   #browse-gc-menu:hover {
     left: calc(100% - 1.375rem);
     z-index: 1;
-    opacity: 1;
-    scale: 1; }
+    visibility: visible; }
   #browse-gc-menu:focus {
     left: calc(100% - 1.375rem);
     z-index: 1;
-    opacity: 1;
-    scale: 1; }
+    visibility: visible; }
   #browse-gc-menu:focus-within {
     left: calc(100% - 1.375rem);
     z-index: 1;
-    opacity: 1;
-    scale: 1; }
+    visibility: visible; }
 
 #browse-menu {
   cursor: default;
@@ -231,13 +219,11 @@
   #browse-menu:hover ~ #browse-gc-menu {
     left: calc(100% - 1.375rem);
     z-index: 1;
-    opacity: 1;
-    scale: 1; }
+    visibility: visible; }
   #browse-menu:focus ~ #browse-gc-menu {
     left: calc(100% - 1.375rem);
     z-index: 1;
-    opacity: 1;
-    scale: 1; }
+    visibility: visible; }
 
 .gc-title {
   color: #00ab3f;
@@ -265,7 +251,7 @@
 
 .grandchild-menu-list li img {
   width: 24px;
-  opacity: 0; }
+  visibility: hidden; }
 
 .grandchild-menu-list li {
   display: flex;
@@ -273,20 +259,17 @@
   cursor: pointer;
   gap: .5rem; }
   .grandchild-menu-list li:hover img {
-    opacity: 1;
+    visibility: visible;
     transition: all 0.3s ease; }
 
 .dropdown {
   position: relative; }
   .dropdown:hover .navdropdown {
-    opacity: 1;
-    scale: 1; }
+    visibility: visible; }
   .dropdown:focus .navdropdown {
-    opacity: 1;
-    scale: 1; }
+    visibility: visible; }
   .dropdown:focus-within .navdropdown {
-    opacity: 1;
-    scale: 1; }
+    visibility: visible; }
 
 .navdropdown {
   display: flex;
@@ -299,8 +282,7 @@
   border-radius: 0 0 8px 8px;
   background-color: white;
   box-shadow: var(--shadow-elevation-high);
-  opacity: 0;
-  scale: 0; }
+  visibility: hidden; }
   .navdropdown:before {
     content: "";
     position: absolute;
@@ -311,8 +293,7 @@
     width: 100%;
     background-color: #00ab3f; }
   .navdropdown:hover:focus:focus-within {
-    scale: 1;
-    opacity: 1; }
+    visibility: visible; }
 
 #bizskills {
   font-size: 1rem;
@@ -378,7 +359,7 @@
 
 .navmenulist form {
   width: 100%/3;
-  height: 10rem; }
+  height: 100%; }
 
 .navmenuitem {
   height: 100%;
@@ -396,8 +377,7 @@
   padding: 1.5rem;
   background-color: white;
   border-radius: 6px;
-  flex-direction: column;
-  transition: all 0.3s ease; }
+  flex-direction: column; }
   .navmenuitem:hover {
     background-color: whitesmoke; }
   .navmenuitem:focus {
