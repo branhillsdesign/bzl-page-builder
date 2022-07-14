@@ -1,7 +1,7 @@
 @import 'sass/base/theme.scss';
 
 .anim-arrow {
-  opacity: 0;
+  visibility: hidden;
   transform: translateX(-16px);
 }
 
@@ -48,14 +48,15 @@
     outline: 2px solid $primary-green;
   }
   &:hover .anim-arrow{
-    opacity: 1;
+    visibility: visible;
     transform: translateX(0px);
     transition: all 0.3s ease;
   }
-}
-
-.grandchild-menu-list > a:focus {
-  outline: 2px solid $primary-green;
+  &:focus .anim-arrow{
+    visibility: visible;
+    transform: translateX(0px);
+    transition: all 0.3s ease;
+  }
 }
 
 .navmenuitem div {
