@@ -39,7 +39,8 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 4px; }
+  gap: 4px;
+  cursor: default; }
   .nav-btn:hover, .nav-btn:focus {
     background-color: whitesmoke;
     transition: all 0.2s ease-in; }
