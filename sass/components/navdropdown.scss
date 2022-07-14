@@ -4,6 +4,7 @@
     z-index: 1;
     visibility: visible;
     opacity: 1;
+    height: calc(100% + 8px);
 }
 @mixin visible {
   visibility: visible;
@@ -15,19 +16,21 @@
 }
 
 #content-gc-menu {
+  z-index: -1;
   background-color: $grey-10;
   border-radius: 0 6px 6px 0;
   padding: 1rem;
   position: absolute;
   left: calc(50% - 1rem);
   top: -.5rem;
-  visibility: hidden;
-  height: calc(100% + 8px);
+  opacity: 0;
+  height: 1px;
+  overflow: hidden;
   border-top: .5rem solid $primary-green;
   &:hover {
     @include gc-menu-anim;
   }
-  &:focus {
+  &:focus-within {
     @include gc-menu-anim;
   }
 }
@@ -37,25 +40,28 @@
   &:hover ~ #content-gc-menu {
     @include gc-menu-anim;
   }
-  &:focus ~ #content-gc-menu {
+  &:focus-within ~ #content-gc-menu {
     @include gc-menu-anim;
   }
 }
 
 #browse-gc-menu {
+  z-index: -1;
   background-color: $grey-10;
   border-radius: 0 6px 6px 0;
   padding: 1rem;
   position: absolute;
   left: calc(50% - 1rem);
   top: -.5rem;
-  visibility: hidden;
+  opacity: 0;
+  height: 0px;
+  overflow: hidden;
   height: calc(100% + 8px);
   border-top: .5rem solid $primary-green;
   &:hover {
     @include gc-menu-anim;
   }
-  &:focus {
+  &:focus-within {
     @include gc-menu-anim;
   }
 }
@@ -78,8 +84,8 @@
   @include small-paragraph;
   display: flex;
   flex-direction: column;
-  &:focus-visible {
-    outline: 2px solid $primary-green;
+  &:focus-within {
+    opacity: 1;
   }
 }
 
@@ -93,31 +99,26 @@
   align-items: center;
   flex-direction: row;
   cursor: pointer;
-  padding: .25rem 0;
+  padding: .25rem .5rem;
   &:hover img {
+    opacity: 1;
+    transition: all 0.3s ease;
     visibility: visible;
+  }
+  &:focus-within img {
+    visibility: visible;
+    opacity: 1;
     transition: all 0.3s ease;
   }
-  &:focus img {
+  &:focus-within {
+    opacity: 1;
     visibility: visible;
-    transition: all 0.3s ease;
-  }
-  &:focus {
-    outline: 2px solid $primary-green;
   }
 }
 
 .grandchild-menu-list li a {
   display: flex;
   flex-direction: row;
-  &:focus {
-    outline: 2px solid $primary-green;
-    @include visible;
-  }
-  &:focus-within {
-    outline: 2px solid $primary-green;
-    @include visible;
-  }
 }
 
 .dropdown {
