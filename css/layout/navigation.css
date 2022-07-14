@@ -276,7 +276,9 @@
   flex-direction: row; }
 
 .dropdown {
-  position: relative; }
+  position: relative;
+  display: flex;
+  justify-content: center; }
   .dropdown:hover .navdropdown {
     visibility: visible;
     opacity: 1; }
@@ -367,10 +369,6 @@
   border-radius: 8px;
   gap: 2px; }
 
-.navmenulist form {
-  width: 100%/3;
-  height: 100%; }
-
 .navmenuitem {
   height: 100%;
   font-size: 0.875rem;
@@ -383,11 +381,11 @@
   text-align: left;
   cursor: pointer;
   width: 16rem;
-  border: none;
   padding: 1.5rem;
   background-color: white;
   border-radius: 6px;
-  flex-direction: column; }
+  flex-direction: column;
+  margin: 2px; }
   .navmenuitem:hover {
     background-color: whitesmoke; }
   .navmenuitem:focus {

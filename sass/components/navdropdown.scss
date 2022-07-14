@@ -123,6 +123,8 @@
 
 .dropdown {
   position: relative;
+  display: flex;
+  justify-content: center;
   &:hover .navdropdown {
     @include visible;
   }

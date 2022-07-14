@@ -152,7 +152,9 @@
   flex-direction: row; }
 
 .dropdown {
-  position: relative; }
+  position: relative;
+  display: flex;
+  justify-content: center; }
   .dropdown:hover .navdropdown {
     visibility: visible;
     opacity: 1; }
