@@ -52,7 +52,7 @@
     height: calc(100% + 8px); }
 
 #content-menu {
-  cursor: default; }
+  cursor: pointer; }
   #content-menu:hover ~ #content-gc-menu {
     left: calc(100% - 1.375rem);
     z-index: 1;
@@ -93,7 +93,7 @@
     height: calc(100% + 8px); }
 
 #browse-menu {
-  cursor: default; }
+  cursor: pointer; }
   #browse-menu:hover ~ #browse-gc-menu {
     left: calc(100% - 1.375rem);
     z-index: 1;
@@ -167,7 +167,6 @@
   padding: 1rem;
   position: absolute;
   top: 48px;
-  transform: translateX(-34%);
   border-radius: 0 0 8px 8px;
   background-color: white;
   box-shadow: var(--shadow-elevation-high);

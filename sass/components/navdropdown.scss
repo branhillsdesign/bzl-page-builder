@@ -36,7 +36,7 @@
 }
 
 #content-menu {
-  cursor: default;
+  cursor: pointer;
   &:hover ~ #content-gc-menu {
     @include gc-menu-anim;
   }
@@ -67,7 +67,7 @@
 }
 
 #browse-menu {
-  cursor: default;
+  cursor: pointer;
   &:hover ~ #browse-gc-menu {
     @include gc-menu-anim;
   }
@@ -138,7 +138,6 @@
   padding: 1rem;
   position: absolute;
   top: 48px;
-  transform: translateX(-34%);
   border-radius: 0 0 8px 8px;
   background-color: $white;
   box-shadow: var(--shadow-elevation-high);
