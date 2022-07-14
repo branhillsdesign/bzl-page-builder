@@ -234,6 +234,8 @@
   text-decoration: none;
   display: flex;
   flex-direction: column; }
+  .grandchild-menu-list:focus-visible {
+    outline: 2px solid #00ab3f; }
 
 .grandchild-menu-list li img {
   width: 24px;
@@ -242,6 +244,7 @@
 .grandchild-menu-list li {
   display: flex;
   align-items: center;
+  flex-direction: row;
   cursor: pointer;
   padding: .25rem 0; }
   .grandchild-menu-list li:hover img {
@@ -252,6 +255,18 @@
     transition: all 0.3s ease; }
   .grandchild-menu-list li:focus {
     outline: 2px solid #00ab3f; }
+
+.grandchild-menu-list li a {
+  display: flex;
+  flex-direction: row; }
+  .grandchild-menu-list li a:focus {
+    outline: 2px solid #00ab3f;
+    visibility: visible;
+    opacity: 1; }
+  .grandchild-menu-list li a:focus-within {
+    outline: 2px solid #00ab3f;
+    visibility: visible;
+    opacity: 1; }
 
 .dropdown {
   position: relative; }
